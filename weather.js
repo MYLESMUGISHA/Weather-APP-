@@ -44,12 +44,36 @@ function getData() {
     wind.innerHTML = "Speed: " + response.wind.speed
     let humidity= document.querySelector(".humidity");
     humidity.innerHTML ="Humidity: " +  response.main.humidity + "°C"
-
+let today = new Date()
+    let date = document.querySelector(".date");
+    date.innerHTML = displayDate(today);
     let weatherIcon= document.querySelector(".weather-icon")
     iconUrl= "http://openweathermap.org/img/w/"
     weatherIcon.src = iconUrl + response.weather[0].icon + ".png"
+
+
+
  }
 
 //get Date
+function displayDate(d){
+    let months = ["Jan", "Feb", "Marc" ,"Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec" ]
+    let days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+    let day = days[d.getDay()];
+    months =months[d.getMonth()];
+    let date = d.getDate();
+    let year = d.getFullYear();
+    return`${day}, ${date}, ${months}, ${year}`
+    
+}
+
+if (inputText.value === ""){
+    alert(" we are sorry we can't find what you are searching")
+}
+else {
+   
+
+}
 
 
