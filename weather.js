@@ -34,7 +34,13 @@ function getData() {
     // console.log(response.main.temp);
     // console.log(response.weather[0].main);
     // console.log(response);
-     let city = document.querySelector(".city");
+
+    if (inputText.value === ""){
+        document.getElementById("inputError").style.display = "block";
+    }
+    else {
+       
+    let city = document.querySelector(".city");
     city.innerHTML = response.name +", " + response.sys.country;
     let weather = document.querySelector(".weather");
     weather.innerHTML ="Weather: "+ response.weather[0].main
@@ -44,14 +50,14 @@ function getData() {
     wind.innerHTML = "Speed: " + response.wind.speed
     let humidity= document.querySelector(".humidity");
     humidity.innerHTML ="Humidity: " +  response.main.humidity + "°C"
-let today = new Date()
+    let today = new Date()
     let date = document.querySelector(".date");
     date.innerHTML = displayDate(today);
     let weatherIcon= document.querySelector(".weather-icon")
     iconUrl= "http://openweathermap.org/img/w/"
     weatherIcon.src = iconUrl + response.weather[0].icon + ".png"
 
-
+}
 
  }
 
@@ -68,12 +74,6 @@ function displayDate(d){
     
 }
 
-if (inputText.value === ""){
-    alert(" we are sorry we can't find what you are searching")
-}
-else {
-   
 
-}
 
 
