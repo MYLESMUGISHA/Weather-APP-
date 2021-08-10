@@ -10,13 +10,14 @@
 <body>
     <div class=" container">
 
-<div id="main-container">
-<div class="container-top">
-<h1> Weather app</h1>
+    <div id="main-container">
+    <div class="container-top">
+   <h1> Weather app</h1>
 <form action=" ">
-<input type="text" class="search-btn" placeholder="search-btn" required>
-<p id="inputError">Please provide a city or country !</p>
-<button class="btn" type="submit">Search</button>
+   <input type="text" class="search-btn" placeholder="Enter a city name">
+   <p id="emptyInputError">Please provide a city or country !</p>
+   <p id="wrongInputError">Please enter a valid city or country name !</p>
+   <button class="btn" type="submit">Search</button>
 </form>
 <section>
     <div class="container">
@@ -30,7 +31,7 @@
         </div>
 
         <div class="current">
-            <div class="temp">temp:25 <span>°C</span>
+            <div class="temp">Temp: 25 <span>°C</span>
             </div>
             <div class="weather"> Weather: sunny</div>
             <div class="humidity"> Humidity: 40 </div>
@@ -39,7 +40,7 @@
     </div>
 
 </section>
-</div>
+    </div>
     </div>
 </body>
 <script src="./weather.js"></script>
