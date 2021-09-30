@@ -86,11 +86,3 @@ function displayDate(d){
    return day + ", " + date + months + year; 
     
 }
-
-
-//To do list
-
-// 1. Add functionality of error handling for (wrong city) done !
-// 2. Refactor the code 
-// 3. Responsiveness
-//4. Final considerations
