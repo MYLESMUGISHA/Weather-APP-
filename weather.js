@@ -83,6 +83,6 @@ function displayDate(d){
     let year = d.getFullYear();
 
 //    return`${day}, ${date}, ${months}, ${year}`
-   return day + ", " + date + months + year; 
+   return day + ": " + date + " " + months + " " + year; 
     
 }
